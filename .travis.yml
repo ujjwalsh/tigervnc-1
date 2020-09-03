@@ -10,6 +10,8 @@ matrix:
   include:
   - language: cpp
     env:
+    arch:
+    - ppc64le
     before_install:
     - sudo apt-get install -y libgnutls-dev libfltk1.3-dev fluid
     - sudo apt-get install -y libxtst-dev libxdamage-dev libxfixes-dev libxrandr-dev
@@ -48,6 +50,8 @@ matrix:
 
   - language: cpp
     os: osx
+    arch:
+      - ppc64le
     # The default image is buggy ATM, use the latest
     osx_image: xcode11.5
     env:
@@ -63,6 +67,8 @@ matrix:
   - language: java
     # compile with java 8 for backwards compatibility
     dist: xenial
+    arch:
+      - ppc64le
     env:
     jdk: openjdk8
     before_install:
